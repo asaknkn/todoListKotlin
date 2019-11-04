@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.todolistMysql.mapper.TaskRepository">
+    <insert id="create" >
+        insert into
+            task(content, done)
+        values
+            (#{content}, false)
+    </insert>
+
+    <update id="update">
+        update task
+            SET done=#{done}
+        where
+            id=#{id}
+    </update>
+
+    <select id="findALL" resultType="Task">
+        select
+            id,
+            content,
+            done
+        from
+            task
+    </select>
+
+    <select id="findById" resultType="Task">
+        select
+            id,
+            content,
+            done
+        from
+            task
+        where
+            id=#{id}
+    </select>
+</mapper>
