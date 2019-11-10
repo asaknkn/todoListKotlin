@@ -1,6 +1,6 @@
 package com.example.todolistMysql.service
 
-import com.example.todolistMysql.mapper.TaskRepository
+import com.example.todolistMysql.repository.TaskRepository
 import com.example.todolistMysql.model.Task
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional

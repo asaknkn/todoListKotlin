@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost/sample_db
-    username: ${mysql_user}
-    password: ${mysql_pass}
+    username: xxxx
+    password: xxxx
 
 mybatis:
   mapperLocations: classpath*:/mapper/*.xml

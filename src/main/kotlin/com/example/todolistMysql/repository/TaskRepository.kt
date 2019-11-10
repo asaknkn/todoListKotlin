@@ -1,11 +1,11 @@
-package com.example.todolistMysql.mapper
+package com.example.todolistMysql.repository
 
 import com.example.todolistMysql.model.Task
 import org.apache.ibatis.annotations.Mapper
-import org.springframework.stereotype.Component
+import org.springframework.stereotype.Repository
 
 @Mapper
-@Component
+@Repository
 interface TaskRepository {
     fun create(content: String)
     fun update(task: Task)
